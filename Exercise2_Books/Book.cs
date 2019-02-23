@@ -17,13 +17,13 @@ namespace Exercise2_Books
         {
             Name = name;
             Price = price;
-            ReleaseDate = releaseDate;
             Category = category;
+            ReleaseDate = releaseDate;
         }
 
         public override string ToString()
         {
-            return $"{Name} {Price} {ReleaseDate.Date.ToShortDateString()} {Category}";
+            return $"{Name.PadRight(25)}\t {Price:C02}\t {Category.PadRight(20)}\t {ReleaseDate.Date.ToShortDateString()}";
         }
 
     }

@@ -19,10 +19,10 @@ namespace Exercise2_Books
     /// </summary>
     public partial class AddBookWindow : Window
     {
-        public AddBookWindow()
+        public AddBookWindow(string[] categories)
         {
             InitializeComponent();
-            comboBoxCategory.ItemsSource = new string[] { "Horror", "Sci Fi", "Biography", "Fiction", "Educational" };
+            comboBoxCategory.ItemsSource = categories;
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)

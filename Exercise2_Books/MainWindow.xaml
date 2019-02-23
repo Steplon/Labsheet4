@@ -14,16 +14,21 @@
             <ColumnDefinition Width="75*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="lbxBooks" HorizontalAlignment="Center" Height="274" Margin="97,120,97,0" Width="400" Grid.Column="1" BorderBrush="Blue" BorderThickness="2" />
-        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Height="26" Margin="80.6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Height="26" Margin="80.6,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" TextChanged="TbxSearch_TextChanged"/>
         <Label x:Name="label" Content="Search" HorizontalAlignment="Left" Margin="16.6,58,0,0" VerticalAlignment="Top" Width="59" Grid.Column="1"/>
-        <ComboBox x:Name="comboBoxFilter" HorizontalAlignment="Left" Margin="419.6,58,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ComboBox x:Name="comboBoxFilter" HorizontalAlignment="Left" Margin="419.6,58,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" SelectionChanged="ComboBoxFilter_SelectionChanged"/>
         <Label x:Name="label1" Content="Filter" HorizontalAlignment="Left" Margin="357.6,54,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <StackPanel Margin="20" VerticalAlignment="Center">
             <Button Name="btnAdd" Content="Add" Margin="25" Height="25" Click="BtnAdd_Click"/>
             <Button Name="btnDelete" Content="Delete" Margin="25" Height="25" Click="BtnDelete_Click"/>
-            <Button Name="btnSave" Content="Save" Margin="25" Height="25"/>
-            <Button Name="btnLoad" Content="Load" Margin="25" Height="25"/>
+            <Button Name="btnSave" Content="Save" Margin="25" Height="25" Click="BtnSave_Click"/>
+            <Button Name="btnLoad" Content="Load" Margin="25" Height="25" Click="BtnLoad_Click"/>
+            <Button Name="btnShowAll" Content="Show All" Margin="25" Height="25" Click="BtnShowAll_Click"/>
         </StackPanel>
+        <Label x:Name="label2" Content="Name" Grid.Column="1" HorizontalAlignment="Left" Margin="97,106,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="Price" Grid.Column="1" HorizontalAlignment="Left" Margin="238,106,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label4" Content="Category" Grid.Column="1" HorizontalAlignment="Left" Margin="316,106,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label5" Content="Release Date" Grid.Column="1" HorizontalAlignment="Left" Margin="415,106,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>
